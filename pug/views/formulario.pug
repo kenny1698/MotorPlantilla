@@ -1,0 +1,25 @@
+extends layout
+
+block contenido
+    
+    h1(style="color:blue;")="Ingrese Producto"
+    br
+
+    form(action="/productos" method="post")
+
+        div(class="form-group")
+            label(for="nombre")
+            b="Nombre"
+            input(id="nombre" class="form-control" type="text" name="nombre" required)
+
+        div(class="form-group")
+            label(for="precio")
+            b="Precio"
+            input(id="precio" class="form-control" type="text" name="precio" required)
+
+        div(class="form-group")
+            label(for="url")
+            b="Foto URL"
+            input(id="url" class="form-control" type="text" name="url" required)
+
+        button(class="btn btn-success mt-3 mb-5")="Enviar"
